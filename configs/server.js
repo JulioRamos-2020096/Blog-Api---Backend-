@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
+import publicationRoutes from "../src/publication/publication.routes.js";
 
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js";
@@ -20,6 +21,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+    app.use("/blog-api/v1/publication",publicationRoutes);
 };
 
 const conectarDB = async () => {

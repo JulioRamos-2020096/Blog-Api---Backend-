@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "89eeddae-69fe-4a47-aa70-92cdb15ce03b",
+		"name": "Blog-Aprendizaje",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37783558"
+	},
+	"item": [
+		{
+			"name": "Publications",
+			"item": [
+				{
+					"name": "Eliminar Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/blog-api/v1/publication/682b6558ea92cf99f22c9b0c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"blog-api",
+								"v1",
+								"publication",
+								"682b6558ea92cf99f22c9b0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Proyecto final de Taller III\",\r\n  \"description\": \"Este proyecto consiste en una aplicación de blog completa usando Node.js y MongoDB.\",\r\n  \"course\": \"Práctica Supervisada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/blog-api/v1/publication",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"blog-api",
+								"v1",
+								"publication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar post por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Proyecto final de Taller III\",\r\n  \"description\": \"Este proyecto consiste en una aplicación de blog completa usando Node.js y MongoDB.\",\r\n  \"course\": \"Práctica Supervisada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/blog-api/v1/publication/682b7064ea92cf99f22c9b1d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"blog-api",
+								"v1",
+								"publication",
+								"682b7064ea92cf99f22c9b1d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

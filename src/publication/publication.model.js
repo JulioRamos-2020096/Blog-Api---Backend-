@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const publicationSchema = Schema({
+const publicationSchema = new Schema({
     title: {
         type: String,
         required: [true, "El título es obligatorio"],
@@ -25,10 +25,13 @@ const publicationSchema = Schema({
     timestamps: true
 });
 
-postSchema.methods.toJSON = function () {
+
+publicationSchema.methods.toJSON = function () {
     const { _id, ...post } = this.toObject();
     post.uid = _id;
     return post;
 };
 
-export default model("Post", postSchema);
+
+export default model("Post", publicationSchema);
+
